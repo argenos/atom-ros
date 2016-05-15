@@ -1,0 +1,21 @@
+{
+  "name": "atom-ros",
+  "main": "./lib/atom-ros",
+  "version": "0.0.0",
+  "description": "An atom package for ROS development.",
+  "keywords": [
+    "language",
+    "grammar",
+    "ROS"
+  ],
+  "activationCommands": {
+    "atom-workspace": "atom-ros:toggle"
+  },
+  "repository": "https://github.com/atom/atom-ros",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

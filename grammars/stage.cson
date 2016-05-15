@@ -1,0 +1,51 @@
+'scopeName': '.source.stage'
+'name': 'stage'
+'fileTypes': ['world', 'inc']
+
+'patterns': [
+  {
+    'match': '\\s*(#).*$'
+    'name': 'comment.line.number-sign'
+  },
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.stage'
+  },
+  {
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.stage'
+  },
+  {
+    'match': '^\\s*\\b(include)\\s*("\\S*")'
+    'captures':
+      '1':
+        'name': 'keyword.control.import.stage'
+      '2':
+        'name': 'string.quoted.double.stage'
+    'name': 'meta.support.function.stage'
+  },
+  {
+    'match': '^\\b(define)\\s+(\\w+)\\s+(\\w+)'
+    'captures':
+      '1':
+        'name': 'keyword.control.stage'
+      '2':
+        'name': 'entity.name.function.stage'
+      '3':
+        'name': 'entity.name.type.stage'
+    'name': 'meta.function.stage'
+  },
+  {
+    'match': '^\\b(name|resolution|paused|interval_sim|speedup|interval_real|threads|quit_time|show_clock|show_clock_interval)'
+    'name': 'variable.parameter.stage'
+  },
+  {
+    'match': '\\b(sensor|block|ranger|actuator|blobfinder|ranger|position|camera|wifi|gripper|fiducial|block)'
+    'name': 'support.function.stage'
+  },
+  {
+    'match': '\\b(window|floorplan)'
+    'name': 'support.class.stage'
+  }
+]

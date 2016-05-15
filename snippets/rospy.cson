@@ -1,0 +1,26 @@
+'.source.python':
+  #Logging
+  #ROSDEBUG
+  'rosdebug':
+    'prefix': 'logd'
+    'body': 'rospy.logdebug("${1:msg}", $2)'
+
+  #ROSINFO
+  'ros info':
+    'prefix': 'logi'
+    'body': 'rospy.loginfo("${1:msg}", $2)'
+
+  #ROSWARN
+  'roswarn':
+    'prefix': 'logw'
+    'body': 'rospy.logwarn("${1:msg}", $2)'
+
+  #ROSERROR
+  'roserror':
+    'prefix': 'loge'
+    'body': 'rospy.logerr("${1:msg}", $2)'
+
+  #ROSFATAL
+  'rosfatal':
+    'prefix': 'logf'
+    'body': 'rospy.logfatal("${1:msg}", $2)'

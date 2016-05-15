@@ -1,0 +1,82 @@
+'.source.cpp':
+  #Base
+  #ROSDEBUG
+  'rosdebug':
+    'prefix': 'ROS_D'
+    'body': 'ROS_DEBUG("$1 %s", "$2");'
+  'rosdebug stream':
+    'prefix': 'ROS_DEBUG_S'
+    'body': 'ROS_DEBUG_STREAM("$1" << "$2");'
+
+  #ROSINFO
+  'rosinfo':
+    'prefix': 'ROS_I'
+    'body': 'ROS_INFO("$1 %s", "$2");'
+
+  #ROSWARN
+  'roswarn':
+    'prefix': 'ROS_W'
+    'body': 'ROS_WARN("$1 %s", "$2");'
+
+  #ROSERROR
+  'roserror':
+    'prefix': 'ROS_E'
+    'body': 'ROS_ERROR("$1 %s", "$2");'
+
+  #ROSFATAL
+  'rosfatal':
+    'prefix': 'ROS_F'
+    'body': 'ROS_FATAL("$1 %s", "$2");'
+
+  #Named
+  #ROSDEBUG
+  'rosdebug named':
+    'prefix': 'ROS_DEBUG_N'
+    'body': 'ROS_DEBUG_NAMED("${1:name}", "$2 %s", "$3");'
+  'rosdebug stream named':
+    'prefix': 'ROS_DEBUG_STREAM_N'
+    'body': 'ROS_DEBUG_STREAM_NAMED("${1:name}", "$2" << "$3");'
+
+  #Conditional
+  #ROS_DEBUG_COND(cond, ...)
+  #ROS_DEBUG_STREAM_COND(cond, args)
+
+  #Conditional Named
+  #ROS_DEBUG_COND_NAMED(cond, name, ...)
+  #ROS_DEBUG_STREAM_COND_NAMED(cond, name, args)
+
+  # Once
+  #ROS_DEBUG_ONCE(...)
+  #ROS_DEBUG_STREAM_ONCE(args)
+  #ROS_DEBUG_ONCE_NAMED(name, ...)
+  #ROS_DEBUG_STREAM_ONCE_NAMED(name, args)
+
+  #Throttle
+  #ROS_DEBUG_THROTTLE(period, ...)
+  #ROS_DEBUG_STREAM_THROTTLE(period, args)
+  #ROS_DEBUG_THROTTLE_NAMED(period, name, ...)
+  #ROS_DEBUG_STREAM_THROTTLE_NAMED(period, name, args)
+
+  # Delayed throttle
+  #ROS_DEBUG_DELAYED_THROTTLE(period, ...)
+  #ROS_DEBUG_STREAM_DELAYED_THROTTLE(period, args)
+  #ROS_DEBUG_DELAYED_THROTTLE_NAMED(period, name, ...)
+  #ROS_DEBUG_STREAM_DELAYED_THROTTLE_NAMED(period, name, args)
+
+  # Filter
+  #ROS_DEBUG_FILTER(filter, ...)
+  #ROS_DEBUG_STREAM_FILTER(filter, args)
+  #ROS_DEBUG_FILTER_NAMED(filter, name, ...)
+  #ROS_DEBUG_STREAM_FILTER_NAMED(filter, name, args)
+
+
+  #ROSASSERT
+  'rosassert':
+    'prefix': 'ROS_A'
+    'body': 'ROS_ASSERT(${1:cond});'
+  'rosinfo':
+    'prefix': 'ROS_ASSERT_M'
+    'body': 'ROS_ASSERT_MSG(${1:cond}, $2);'
+  'rosbreak':
+    'prefix': 'ROS_B'
+    'body': 'ROS_BREAK();'

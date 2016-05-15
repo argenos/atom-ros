@@ -1,0 +1,8 @@
+'scopeName': '.source.action'
+'name': 'actionlib'
+'fileTypes': ['action']
+'patterns': [
+  {
+    'include': '.source.srv'
+  }
+]

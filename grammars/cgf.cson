@@ -1,0 +1,9 @@
+'scopeName': '.source.ini'
+'name': 'cfg'
+'fileTypes': ['cfg']
+
+'patterns': [
+  {
+    'include': 'source.ini'
+  }
+]

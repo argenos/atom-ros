@@ -1,0 +1,56 @@
+'.source.launch':
+  'launch':
+    'prefix': 'launch'
+    'body': """
+    <?xml version="1.0" encoding="UTF-8"?>
+    <launch>
+    \t$1
+    </launch>
+    """
+  'argument':
+    'prefix': 'arg'
+    'body': '<arg name="$1" default="$2" value="$3" />$0'
+
+  'param':
+    'prefix': 'param'
+    'body': '<param name="${1:namespace/name}" value="${2:value}" type="${3:int}${4:str}${5:double}${6:bool}"/>'
+
+  'rosparam':
+    'prefix': 'rosparam'
+    'body': '<rosparam command="$1" file="$(find ${2:pkg-name})/${3:path}/${4:file}" ns="${5:namespace}"/>'
+
+  'node line':
+    'prefix': 'nodel'
+    'body': '<node name="${1:nodename}" pkg="${2: mypackage}" type="${3:nodetype}" args="$4" output="${5:screen}${6:log}" respawn="${7:true}${8:false}" />'
+
+  'node':
+    'prefix': 'node'
+    'body': '<node name="${1:nodename}" pkg="${2: mypackage}" type="${3:nodetype}" args="$4" output="${5:screen}${6:log}" respawn="${7:true}${8:false}">\n\t$9\n</node>'
+
+  'include':
+    'prefix':'include'
+    'body':'<include file="$(find ${2:pkg-name})/${3:path}/${4:file}" ns="${5:namespace}"/>'
+
+  'remap':
+    'prefix': 'remap'
+    'body': '<remap from="$1" to="$2" />'
+
+  'commment':
+    'prefix': '<!'
+    'body': '<!-- $1 -->'
+
+  'duild depend':
+    'prefix':'build'
+    'body': '<build_depend>$1</build_depend>'
+
+  'run depend':
+    'prefix': 'run'
+    'body': '<run_depend>$1</run_depend>'
+
+  'build tool':
+    'prefix': 'buildt'
+    'body': '<buildtool_depend>${1:catkin}</buildtool_depend>'
+
+  'depend':
+    'prefix':'depend'
+    'body':'<depend>$1</depend>'

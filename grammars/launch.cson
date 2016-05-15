@@ -1,0 +1,12 @@
+'scopeName': '.source.launch'
+'name': 'roslaunch'
+'fileTypes': ['launch']
+
+'patterns': [
+  {
+    'include': 'text.xml'
+  },
+  {
+        'include': 'source.yaml'
+  }
+]

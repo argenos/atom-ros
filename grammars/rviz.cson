@@ -1,0 +1,16 @@
+'scopeName': '.source.rviz'
+'name': 'rviz'
+'fileTypes': ['rviz']
+
+'patterns': [
+  {
+    # FIXME For some reason this doesn't work
+    'match': '(Topic:\\s*)((?:\/\\w+)+)'
+    'captures':
+      '2':
+        'name': 'support.function'
+  }
+  {
+    'include': 'source.ini'
+  }
+]

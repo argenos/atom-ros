@@ -1,0 +1,12 @@
+'scopeName': '.source.srv'
+'name': 'rossrv'
+'fileTypes': ['srv']
+'patterns': [
+  {
+    'include': '.source.msg'
+  }
+  {
+    'match': '^(---)'
+    'name': 'entity.name.section.srv'
+  }
+]
