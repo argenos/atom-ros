@@ -1,6 +1,5 @@
 {
   "name": "atom-ros",
-  "main": "./lib/atom-ros",
   "version": "0.0.0",
   "description": "An atom package for ROS development.",
   "keywords": [
@@ -8,14 +7,16 @@
     "grammar",
     "ROS"
   ],
-  "activationCommands": {
-    "atom-workspace": "atom-ros:toggle"
-  },
-  "repository": "https://github.com/atom/atom-ros",
+  "repository": "https://github.com/argenos/atom-ros",
+  "bugs": "https://github.com/argenos/atom-ros/issues",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-  }
+  },
+  "package-deps": [
+    "language-ini",
+    "language-cmake"
+  ]
 }
