@@ -37,15 +37,19 @@
     'name': 'meta.function.stage'
   },
   {
-    'match': '^\\b(name|resolution|paused|interval_sim|speedup|interval_real|threads|quit_time|show_clock|show_clock_interval)'
+    'match': '^\\s*\\b(name|resolution|paused|interval_sim|speedup|interval_real|threads|quit_time|show_clock|show_clock_interval)\\b'
     'name': 'variable.parameter.stage'
   },
   {
-    'match': '\\b(sensor|block|ranger|actuator|blobfinder|ranger|position|camera|wifi|gripper|fiducial|block)'
+    'match': '\\b(sensor|block|ranger|actuator|blobfinder|ranger|position|camera|wifi|gripper|fiducial|block|model|drive|block|origin|size|localization|localization_origin)\\b'
     'name': 'support.function.stage'
   },
   {
-    'match': '\\b(window|floorplan)'
+    'match': '^\\s*\\b(window|floorplan)\\b'
     'name': 'support.class.stage'
+  }
+  {
+    'match': '^\\s*\\b(gui_nose|gui_grid|gui_move|boundary|color|gui_outline|gripper_return|fiducial_return|ranger_return|obstacle_return|update_interval|color_rgba|bitmap|ctrl|fiducial_key|blob_return|mass|map_resolution|say|alwayson|stack_children)\\b'
+    'name': 'variable.parameter.stage'
   }
 ]
