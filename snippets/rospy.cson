@@ -1,26 +1,53 @@
 '.source.python':
   #Logging
-  #ROSDEBUG
   'rosdebug':
     'prefix': 'logd'
     'body': 'rospy.logdebug("${1:msg}", $2)'
-
-  #ROSINFO
   'ros info':
     'prefix': 'logi'
     'body': 'rospy.loginfo("${1:msg}", $2)'
-
-  #ROSWARN
   'roswarn':
     'prefix': 'logw'
     'body': 'rospy.logwarn("${1:msg}", $2)'
-
-  #ROSERROR
   'roserror':
     'prefix': 'loge'
     'body': 'rospy.logerr("${1:msg}", $2)'
-
-  #ROSFATAL
   'rosfatal':
     'prefix': 'logf'
     'body': 'rospy.logfatal("${1:msg}", $2)'
+
+  # Publisher and Subscriber
+  'subscriber':
+    'prefix': 'subs'
+    'body': 'rospy.Subscriber("${1:topic_name}", ${2:msg_class}, ${3:callback})'
+  'publisher':
+    'prefix': 'pub'
+    'body': 'rospy.Publisher("${1:topic_name}", ${2:msg_class}, queue_size=$3)'
+
+  # Initialization and Shutdown
+  'roslib':
+    'prefix': 'rosl'
+    'body': 'import roslib; roslib.load_manifest("${1:YOUR_PACKAGE_NAME}")'
+  'init_node':
+    'prefix': 'init'
+    'body': 'rospy.init_node("${1:my_node_name}", anonymous=${2:False})'
+  'spin':
+    'prefix': 'spin'
+    'body': 'rospy.spin()'
+  'shutdown':
+    'prefix': 'shut'
+    'body': 'rospy.is_shutdown()'
+  'shutdown hooks':
+    'prefix': 'on_shut'
+    'body': 'rospy.on_shutdown(${1:my_hook})'
+
+  #Services
+  'service':
+    'prefix': 'serv'
+    'body': 'rospy.Service("${1:service_name}", ${2:service_class}, ${3:handler})'
+  'service proxy':
+    'prefix': 'servp'
+    'body': 'rospy.ServiceProxy("${1:service_name}", ${2:service_class})'
+  'wait':
+    'prefix': 'wait'
+    'body': 'rospy.wait_for_service("${1:service_name}")'
