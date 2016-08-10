@@ -1,6 +1,6 @@
 {
   "name": "atom-ros",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "An atom package for ROS development.",
   "keywords": [
     "language",
@@ -13,8 +13,7 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "package-deps": [
     "language-ini",
     "language-cmake"
