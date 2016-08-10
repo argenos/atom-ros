@@ -1,32 +1,47 @@
 '.source.python':
   #Logging
-  'rosdebug':
+  'rospy.logdebug':
+    'prefix': 'rospy.logd'
+    'body': 'rospy.logdebug("${1:msg}", $2)'
+  'logdebug':
     'prefix': 'logd'
     'body': 'rospy.logdebug("${1:msg}", $2)'
-  'ros info':
+  'rospy.loginfo':
+    'prefix': 'rospy.logi'
+    'body': 'rospy.loginfo("${1:msg}", $2)'
+  'loginfo':
     'prefix': 'logi'
     'body': 'rospy.loginfo("${1:msg}", $2)'
-  'roswarn':
+  'rospy.logwarn':
+    'prefix': 'rospy.logw'
+    'body': 'rospy.logwarn("${1:msg}", $2)'
+  'logwarn':
     'prefix': 'logw'
     'body': 'rospy.logwarn("${1:msg}", $2)'
-  'roserror':
+  'rospy.logerror':
+    'prefix': 'rospy.loge'
+    'body': 'rospy.logerr("${1:msg}", $2)'
+  'logerror':
     'prefix': 'loge'
     'body': 'rospy.logerr("${1:msg}", $2)'
-  'rosfatal':
+  'rospy.logfatal':
+    'prefix': 'rospy.logf'
+    'body': 'rospy.logfatal("${1:msg}", $2)'
+  'logfatal':
     'prefix': 'logf'
     'body': 'rospy.logfatal("${1:msg}", $2)'
 
   # Publisher and Subscriber
   'subscriber':
-    'prefix': 'subs'
+    'prefix': 'Subs'
     'body': 'rospy.Subscriber("${1:topic_name}", ${2:msg_class}, ${3:callback})'
   'publisher':
-    'prefix': 'pub'
+    'prefix': 'Pub'
     'body': 'rospy.Publisher("${1:topic_name}", ${2:msg_class}, queue_size=$3)'
 
   # Initialization and Shutdown
   'roslib':
-    'prefix': 'rosl'
+    'prefix': 'roslib'
     'body': 'import roslib; roslib.load_manifest("${1:YOUR_PACKAGE_NAME}")'
   'init_node':
     'prefix': 'init'
@@ -43,11 +58,26 @@
 
   #Services
   'service':
-    'prefix': 'serv'
+    'prefix': 'Serv'
     'body': 'rospy.Service("${1:service_name}", ${2:service_class}, ${3:handler})'
   'service proxy':
-    'prefix': 'servp'
+    'prefix': 'Servp'
     'body': 'rospy.ServiceProxy("${1:service_name}", ${2:service_class})'
   'wait':
     'prefix': 'wait'
     'body': 'rospy.wait_for_service("${1:service_name}")'
+
+  #Node template
+  'simple node':
+    'prefix': 'node'
+    'body': """
+    class ${1: NodeClass}(object):
+      def __init__(self):
+        super(${1: NodeClass}, self).__init__()
+
+    if __name__ == "__main__":
+      rospy.init_node('${2:node_name}', anonymous=${3:False})
+      node = ${1: NodeClass}()
+      rospy.spin()
+
+    """
