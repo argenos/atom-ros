@@ -74,7 +74,7 @@
   'rosassert':
     'prefix': 'ROS_A'
     'body': 'ROS_ASSERT(${1:cond});'
-  'rosinfo':
+  'rosassertmessage':
     'prefix': 'ROS_ASSERT_M'
     'body': 'ROS_ASSERT_MSG(${1:cond}, $2);'
   'rosbreak':
