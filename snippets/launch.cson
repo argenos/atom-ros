@@ -31,6 +31,10 @@
     'prefix':'include'
     'body':'<include file="$(find ${2:pkg-name})/${3:path}/${4:file}" ns="${5:namespace}"/>'
 
+  'group':
+    'prefix':'group'
+    'body':'<group ns="${1:namespace}">\n\t$2\n</group>'
+
   'remap':
     'prefix': 'remap'
     'body': '<remap from="$1" to="$2" />'
