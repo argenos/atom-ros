@@ -1,0 +1,33 @@
+'scopeName': '.source.rosbuild'
+'name': 'CMake ROS'
+'fileTypes': ['CMakeLists.txt']
+'patterns': [
+  {
+    'begin': '^\\s*\\b(catkin_python_setup|add_message_files|add_service_files|add_action_files|generate_messages|generate_dynamic_reconfigure_options|catkin_package|catkin_add_gtest|catkin_add_nosetests)(\\()'
+    'beginCaptures':
+      '1':
+        'name': 'support.function.catkin'
+      '2':
+        'name': 'punctuation.definition.catkin'
+    'end': '(\\))'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.catkin'
+    'name': 'meta.function-call.catkin'
+    'patterns': [
+      {
+        'include': '#ros-arguments'
+      }
+      {
+        'include': 'source.cmake'
+      }
+    ]
+  }
+  {
+    'include': 'source.cmake'
+  }
+]
+'repository':
+  'ros-arguments':
+        'match': '\\b(CATKIN_DEPENDS|DEPENDENCIES|INCLUDE_DIRS|LIBRARIES|DEPENDS|FILES|PREFIX|PROPERTIES|CFG_EXTRAS|OUTPUT_NAME)'
+        'name': 'keyword.other.catkin'
