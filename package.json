@@ -7,7 +7,7 @@
     "grammar",
     "ROS"
   ],
-  "repository": "https://github.com/argenos/atom-ros",
+  "repository": "git@github.com:argenos/atom-ros.git",
   "bugs": "https://github.com/argenos/atom-ros/issues",
   "license": "MIT",
   "engines": {

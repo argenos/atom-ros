@@ -1,5 +1,5 @@
 # atom-ros
-
+[![Build Status](https://travis-ci.org/argenos/atom-ros.svg?branch=master)](https://travis-ci.org/argenos/atom-ros)  
 An atom package for development of Robot Operating System ([ROS](http://www.ros.org/)), including grammars for some common file types and useful snippets.
 
 Contributions are greatly appreciated! Please fork the repository and open a pull request with your additions!
@@ -25,15 +25,11 @@ Syntax highlighting for the following file types:
 * CMakeLists  
   Basic highlighting for rosbuild.
 
+
 ### Snippets
 Write the following prefixes and use `<Tab>` to autocomplete
 
 #### rospy
-
-| Trigger | Name | Body |
-|---|
-| logd | logdebug() |
-| |  |
 
 #### rosconsole
 
