@@ -23,7 +23,7 @@ Finally you can install this package by running
 Syntax highlighting for the following file types:
 * ROS file types
   * `.msg`, `.srv`, `.action`
-  * `.launch`
+  * `.launch`, `.perspective`
 * Stage
   * `.world`, `.inc`
 * CMakeLists
