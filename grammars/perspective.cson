@@ -1,4 +1,4 @@
-'scopeName': '.source.perspective'
+'scopeName': '.source.json.perspective'
 'name': 'rqt'
 'fileTypes': ['perspective']
 'patterns': [
