@@ -7,6 +7,6 @@
     'include': 'text.xml'
   },
   {
-        'include': 'source.yaml'
+    'include': 'source.yaml'
   }
 ]
