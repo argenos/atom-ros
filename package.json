@@ -1,6 +1,6 @@
 {
   "name": "atom-ros",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An atom package for ROS development.",
   "keywords": [
     "language",
